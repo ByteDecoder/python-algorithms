@@ -7,13 +7,10 @@ def memoize(f):
         return memo[x]
     return helper
     
-def get_fib(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        return get_fib(n-1) + get_fib(n-2)
+def get_fib(position):
+    if position == 0 or position == 1:
+        return position
+    return get_fib(position - 1) + get_fib(position - 2)
 
 # Decorating the function with memoization
 get_fib = memoize(get_fib)
