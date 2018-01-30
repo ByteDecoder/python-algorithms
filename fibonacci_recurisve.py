@@ -15,5 +15,5 @@ def get_fib(n):
     else:
         return get_fib(n-1) + get_fib(n-2)
 
-# Decorting the function with memoization
+# Decorating the function with memoization
 get_fib = memoize(get_fib)
